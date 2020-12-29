@@ -1,0 +1,16 @@
+@startuml
+skinparam dpi 96
+
+start
+:checkout-head;
+:prepare-gihub;
+:install-requirement-tools;
+:create-plantuml-image;
+:delete-plantuml-image;
+:check-diff;
+if (diff-files) then (>0)
+  :push-to-git;
+endif
+stop
+
+@enduml
